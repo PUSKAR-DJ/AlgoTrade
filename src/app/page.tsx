@@ -1,8 +1,13 @@
+'use client';
 
 import {Dashboard} from '@/components/dashboard/dashboard';
 import {Sidebar, SidebarContent, SidebarHeader, SidebarInset, SidebarMenu, SidebarMenuItem, SidebarProvider} from '@/components/ui/sidebar';
+import Link from 'next/link';
+import {usePathname} from 'next/navigation';
 
 export default function Home() {
+  const pathname = usePathname();
+
   return (
     <SidebarProvider>
       <Sidebar>
@@ -12,35 +17,39 @@ export default function Home() {
         <SidebarContent>
           <SidebarMenu>
             <SidebarMenuItem>
-              <a href="#" className="block py-2 pl-4 text-sm">
+              <Link href="/" className={`block py-2 pl-4 text-sm ${pathname === '/' ? 'font-semibold' : ''}`}>
                 Dashboard
-              </a>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <a href="#" className="block py-2 pl-4 text-sm">
+              <Link href="/trade-history" className={`block py-2 pl-4 text-sm ${pathname === '/trade-history' ? 'font-semibold' : ''}`}>
                 Trade History
-              </a>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <a href="#" className="block py-2 pl-4 text-sm">
+              <Link href="/bot-control" className={`block py-2 pl-4 text-sm ${pathname === '/bot-control' ? 'font-semibold' : ''}`}>
                 Bot Control
-              </a>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <a href="#" className="block py-2 pl-4 text-sm">
+              <Link href="/configuration" className={`block py-2 pl-4 text-sm ${pathname === '/configuration' ? 'font-semibold' : ''}`}>
                 Configuration
-              </a>
+              </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <a href="#" className="block py-2 pl-4 text-sm">
+              <Link href="/performance-analysis" className={`block py-2 pl-4 text-sm ${pathname === '/performance-analysis' ? 'font-semibold' : ''}`}>
                 Performance Analysis
-              </a>
+              </Link>
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarContent>
       </Sidebar>
       <SidebarInset>
-        <Dashboard/>
+        {pathname === '/' && <Dashboard/>}
+        {pathname === '/trade-history' && <div>Trade History Content</div>}
+        {pathname === '/bot-control' && <div>Bot Control Content</div>}
+        {pathname === '/configuration' && <div>Configuration Content</div>}
+        {pathname === '/performance-analysis' && <div>Performance Analysis Content</div>}
       </SidebarInset>
     </SidebarProvider>
   );

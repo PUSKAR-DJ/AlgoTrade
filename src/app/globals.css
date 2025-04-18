@@ -84,6 +84,12 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    /* Gradient background */
+    background: linear-gradient(to bottom, #1A237E, #000000);
+    height: 100vh;
+    margin: 0;
+    overflow: auto;
   }
 }
+
 
