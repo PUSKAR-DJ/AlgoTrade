@@ -22,16 +22,6 @@ export default function Home() {
               </Link>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <Link href="/trade-history" className={`block py-2 pl-4 text-sm ${pathname === '/trade-history' ? 'font-semibold' : ''}`}>
-                Trade History
-              </Link>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
-              <Link href="/bot-control" className={`block py-2 pl-4 text-sm ${pathname === '/bot-control' ? 'font-semibold' : ''}`}>
-                Bot Control
-              </Link>
-            </SidebarMenuItem>
-            <SidebarMenuItem>
               <Link href="/configuration" className={`block py-2 pl-4 text-sm ${pathname === '/configuration' ? 'font-semibold' : ''}`}>
                 Configuration
               </Link>
@@ -46,8 +36,6 @@ export default function Home() {
       </Sidebar>
       <SidebarInset>
         {pathname === '/' && <Dashboard/>}
-        {pathname === '/trade-history' && <div>Trade History Content</div>}
-        {pathname === '/bot-control' && <div>Bot Control Content</div>}
         {pathname === '/configuration' && <div>Configuration Content</div>}
         {pathname === '/performance-analysis' && <div>Performance Analysis Content</div>}
       </SidebarInset>
