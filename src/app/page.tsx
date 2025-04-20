@@ -21,13 +21,24 @@ export default function Home() {
                 Dashboard
               </Link>
             </SidebarMenuItem>
+            <SidebarMenuItem>
+              <Link href="/about" className={`block py-2 pl-4 text-sm ${pathname === '/about' ? 'font-semibold' : ''}`}>
+                About
+              </Link>
+            </SidebarMenuItem>
           </SidebarMenu>
         </SidebarContent>
       </Sidebar>
       <SidebarInset>
         {pathname === '/' && <Dashboard/>}
+        {pathname === '/about' &&
+          <div className="container mx-auto p-4">
+            <h1 className="text-2xl font-bold mb-4">About AlgoTrade Dashboard</h1>
+            <p className="mb-4">
+              This dashboard is designed to provide insights and analysis for automated trading strategies. It allows users to monitor the performance of their trading bots, identify areas for improvement, and make informed decisions.
+            </p>
+          </div>}
       </SidebarInset>
     </SidebarProvider>
   );
 }
-
