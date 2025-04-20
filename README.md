@@ -1,68 +1,110 @@
-# Firebase Studio
+# AlgoTrade - Algorithmic Trading Platform
 
-This is a NextJS starter in Firebase Studio.
+AlgoTrade is a modern, user-friendly algorithmic trading platform designed to provide traders with advanced tools for monitoring, analyzing, and optimizing their automated trading strategies.
 
-## Project Overview
-This project implements a trading bot dashboard designed to automate trading strategies. It provides a user interface for configuring and monitoring trading bots, viewing trade history, and analyzing performance.
-
-To get started, take a look at src/app/page.tsx.
-
-# Trading Bot
+![AlgoTrade Dashboard](src/components/screenshot.png)
 
 ## Features
 
-*   **Automated Trading:** Executes trades based on predefined strategies.
-*   **Strategy Configuration:** Allows users to configure and customize trading strategies.
-*   **Performance Monitoring:** Tracks and reports on the bot's trading performance.
-*   **Integration with MT5:** Connects to MetaTrader 5 (MT5) platform for trade execution.
-*   **AI-Powered Insights:** Provides AI-driven analysis of trading performance with suggestions for improvement.
+- 📊 Real-time performance monitoring
+- 📈 Comprehensive trading analytics
+- 🔄 Customizable trading strategies
+- 📉 Historical data analysis
+- 🌐 Multi-exchange support
+- 🛡️ Advanced risk management tools
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Custom components with shadcn/ui
+- **Icons**: Lucide Icons
+- **State Management**: React Context API
 
 ## Getting Started
 
-1.  **Prerequisites:**
-    *   Node.js and npm installed
-    *   MetaTrader 5 platform (optional, for full trading functionality)
-    *   A Google Cloud project with the Genkit-AI API enabled and an API key.
+### Prerequisites
 
-2.  **Installation:**
+- Node.js 18.0 or higher
+- npm or yarn
 
-    Clone the repository:
-    ```bash
-    git clone <repository-url>
-    cd <repository-directory>
-    ```
+### Installation
 
-    Install the dependencies:
-    ```bash
-    npm install
-    ```
+1. Clone the repository:
+```bash
+git clone https://github.com/PUSKAR-DJ/AlgoTrade.git
+cd algotrade
+```
 
-3.  **Configuration:**
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-    *   Create a `.env` file in the root directory and add your Google GenAI API key:
-        ```
-        GOOGLE_GENAI_API_KEY=<your_api_key>
-        ```
+3. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-4.  **Running the App:**
-
-    Start the development server:
-    ```bash
-    npm run dev
-    ```
-
-    Open your browser and navigate to `http://localhost:9002` to view the dashboard.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
-*   `src/ai/`: Contains the Genkit AI flow for trading performance analysis.
-*   `src/app/`: Contains the Next.js application, including pages, layouts, and global styles.
-*   `src/components/`: Contains reusable React components.
-*   `src/components/ui/`: Contains ShadCN UI components.
-*   `src/hooks/`: Contains custom React hooks.
-*   `src/lib/`: Contains utility functions.
-*   `src/services/`: Contains services for interacting with external APIs (e.g., MT5).
+```
+src/
+├── app/                    # Next.js app router pages
+│   ├── about/             # About page
+│   ├── settings/          # Settings page
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Dashboard page
+├── components/            # React components
+│   ├── dashboard/         # Dashboard components
+│   ├── layout/           # Layout components
+│   └── ui/               # UI components
+├── lib/                  # Utility functions
+└── styles/               # Global styles
+```
+
+## Features in Detail
+
+### Dashboard
+- Real-time performance metrics
+- Trading activity monitoring
+- Strategy performance tracking
+- Profit/loss visualization
+
+### About
+- Platform overview
+- Key features
+- How it works
+- FAQ section
+
+### Settings
+- Account configuration
+- Trading preferences
+- API configuration
+- Risk management settings
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
+- [shadcn/ui](https://ui.shadcn.com/)
