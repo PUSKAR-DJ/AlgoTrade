@@ -2,6 +2,25 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/compo
 import {useEffect, useState} from 'react';
 import { ArrowDown, ArrowUp, BarChart2, DollarSign, Percent, TrendingUp } from 'lucide-react';
 
+// Client-side only time display component to prevent hydration errors
+function TimeDisplay() {
+  const [time, setTime] = useState<string>('');
+  
+  useEffect(() => {
+    // Set initial time
+    setTime(new Date().toLocaleTimeString());
+    
+    // Update time every second
+    const intervalId = setInterval(() => {
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
+    
+    return () => clearInterval(intervalId);
+  }, []);
+  
+  return <div className="text-sm text-gray-500">Last updated: {time}</div>;
+}
+
 export const Dashboard = () => {
   // Mock data for key metrics
   const [profitLoss, setProfitLoss] = useState(1250.50);
@@ -33,7 +52,7 @@ export const Dashboard = () => {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-800">Trading Overview</h1>
-        <div className="text-sm text-gray-500">Last updated: {new Date().toLocaleTimeString()}</div>
+        <TimeDisplay />
       </div>
       
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
