@@ -108,3 +108,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Lucide Icons](https://lucide.dev/)
 - [shadcn/ui](https://ui.shadcn.com/)
+
+## Credits
+
+This project has been made possible with the help of the following tools and services:
+
+- **[Firebase Studio](https://firebase.studio)**: For providing excellent tools for app development and backend services.
+- **[Cursor.ai](https://cursor.ai)**: For offering advanced AI capabilities that helped improve the efficiency and intelligence of the project.
+- **[ChatGPT](https://chat.openai.com)**: For assisting with brainstorming, coding, and troubleshooting throughout the development process.
+
+Thank you for the invaluable support!
