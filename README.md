@@ -34,7 +34,7 @@ AlgoTrade is a modern, user-friendly algorithmic trading platform designed to pr
 1. Clone the repository:
 ```bash
 git clone https://github.com/PUSKAR-DJ/AlgoTrade.git
-cd algotrade
+cd AlgoTrade
 ```
 
 2. Install dependencies:
@@ -51,7 +51,7 @@ npm run dev
 yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [http://localhost:9002](http://localhost:9002) in your browser.
 
 ## Project Structure
 
